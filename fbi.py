@@ -955,7 +955,7 @@ def main():
 		print '''
 [Warn] you must create access token again if 
        your access token is deleted
-'''
+       
 		a = raw_input("[!] type 'delete' to continue : ")
 		if a.lower() == 'delete':
 			try:
