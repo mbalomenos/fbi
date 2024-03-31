@@ -948,22 +948,21 @@ def main():
             print('\n[*] Generate Access token facebook [*]'.center(44) + '\n')
             print('[Warn] Please turn off your VPN before using this feature !!!')
             id()
-      elif cek.lower() == 'rm_token':
-	print('''
+        elif cek.lower() == 'rm_token':
+            print('''
 [Warn] You must create an access token again if 
        your access token is deleted
 ''')
 
-	a = input("[!] Type 'delete' to continue : ")
-	if a.lower() == 'delete':
-   	 try:
-        os.system('rm -rf cookie/token.log')
-        print('[*] Success delete cookie/token.log')
-        main()
-    	except OSError:
-        print('[*] Failed to delete cookie/token.log')
-        main()
-
+            a = input("[!] Type 'delete' to continue : ")
+            if a.lower() == 'delete':
+                try:
+                    os.system('rm -rf cookie/token.log')
+                    print('[*] Success delete cookie/token.log')
+                    main()
+                except OSError:
+                    print('[*] Failed to delete cookie/token.log')
+                    main()
             else:
                 print('[*] Failed to delete cookie/token.log')
                 main()
@@ -1000,7 +999,6 @@ def main():
         print('[!] Invalid parameter on command : ' + cek)
         main()
 
-#
 ######################################################################################################################
 
 ################################################################################
