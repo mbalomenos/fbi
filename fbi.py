@@ -18,17 +18,19 @@ else:
 ###################################################################
 #                      Exception
 try:
-	import requests
+    import requests
 except ImportError:
-	print R + '_     _'.center(44)
-	print "o' \.=./ `o".center(44)
-	print '(o o)'.center(44)
-	print 'ooO--(_)--Ooo'.center(44)
-	print W + ' '
-	print ('O S I F').center(44)
-	print ' '
-	print "[!] Can't import module 'requests'\n"
-	sys.exit()
+    print(R + '_     _'.center(44))
+    print("o' \.=./ `o".center(44))
+    print('(o o)'.center(44))
+    print('ooO--(_)--Ooo'.center(44))
+    print(W + ' ')
+    print(('O S I F').center(44))
+    print(' ')
+    print("[!] Can't import module 'requests'\n")
+    import sys
+    sys.exit()
+
 ####################################################################
 #                    Set Default encoding
 reload (sys)
