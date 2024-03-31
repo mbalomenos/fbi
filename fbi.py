@@ -59,19 +59,18 @@ def baliho():
 #		    Print In terminal
 def show_program():
     	print('''%sINFORMATION%s''' % (W, W))
-
-    Author     Hak9
-    Name       Facebook Information
-    Version    full version
-    Date       13/08/2018 
-    Jabber     hak9@jabber.de
+    	print('''Author     Hak9
+Name       Facebook Information
+Version    full version
+Date       13/08/2018 
+Jabber     hak9@jabber.de
 
 * if you find any errors or problems , please contact
   author
-'''%(G,W)
-def info_ga():
+''' % (G, W))
 
-	print '''
+def info_ga():
+   	 print('''
      %sCOMMAND                      DESCRIPTION%s
   -------------       -------------------------------------
 
@@ -82,8 +81,8 @@ def info_ga():
    dump_phone         fetching all phone number from friend list
    dump_mail          fetching all emails from friend list
    dump_<id>_id       fetching all id from your friends <spesific>
-		      ex: dump_username_id
-
+                      ex: dump_username_id
+'''%(G,W)
    token              Generate access token
    cat_token          show your access token
    rm_token           remove access token
@@ -96,9 +95,10 @@ def info_ga():
    exit               Exit the program
 '''%(G,W)
 def menu_bot():
-	print '''
+    	print('''
    %sNumber                  INFO%s
- ---------   ------------------------------------
+'''%(G,W) +
+   ''' ---------   ------------------------------------
 
    [ 01 ]      auto reactions
    [ 02 ]      auto comment
@@ -111,10 +111,12 @@ def menu_bot():
 
    [ 00 ]      back to main menu
 '''%(G,W)
+
 def menu_reaction():
-	print '''
+    	print('''
    %sNumber                  INFO%s
- ----------   ------------------------------------
+''' % (G, W) +
+'''   ----------   ------------------------------------
 
    [ 01 ]      like
    [ 02 ]      reaction 'LOVE'
@@ -124,7 +126,7 @@ def menu_reaction():
    [ 06 ]      reaction 'ANGRY'
 
    [ 00 ]      back to menu bot
-'''%(G,W)
+'''%(G,W))
 ####################################################################
 #                     GENERATE ACCESS TOKEN
 def get(data):
