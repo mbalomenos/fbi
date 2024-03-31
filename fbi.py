@@ -58,9 +58,7 @@ def baliho():
 ####################################################################
 #		    Print In terminal
 def show_program():
-
-	print '''
-                    %sINFORMATION%s
+    print('%sINFORMATION%s' % (W, W))
  ------------------------------------------------------
 
     Author     Hak9
