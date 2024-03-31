@@ -43,20 +43,18 @@ n = []
 ####################################################################
 #                        BANNER
 def baliho():
-	try:
-		token = open('cookie/token.log','r').read()
-		r = requests.get('https://graph.facebook.com/me?access_token=' + token)
-		a = json.loads(r.text)
-		name = a['name']
-		n.append(a['name'])
+    try:
+        token = open('cookie/token.log','r').read()
+        r = requests.get('https://graph.facebook.com/me?access_token=' + token)
+        a = json.loads(r.text)
+        name = a['name']
+        n.append(a['name'])
 
-
-	except (KeyError, IOError):
-		print(' ' + W)
-		print(('F B I').center(44))
-    		print((W + '     [' + G +'Facebook Information'+ W + ']'))
-    		print(' ')
-
+    except (KeyError,IOError):
+        print(' ' + W)
+        print('F B I'.center(44))
+        print((W + '     [' + G + 'Facebook Information' + W + ']'))
+        print(' ')
 ####################################################################
 #		    Print In terminal
 def show_program():
