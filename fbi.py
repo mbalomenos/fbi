@@ -51,12 +51,12 @@ def baliho():
 		n.append(a['name'])
 
 
-	except (KeyError,IOError):
-	 
-		print ' ' + W
-		print ('F B I').center(44)
-		print (W + '     [' + G +'Facebook Information'+ W + ']')
-		print ' '
+	except (KeyError, IOError):
+		print(' ' + W)
+		print(('F B I').center(44))
+    		print((W + '     [' + G +'Facebook Information'+ W + ']'))
+    		print(' ')
+
 ####################################################################
 #		    Print In terminal
 def show_program():
