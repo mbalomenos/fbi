@@ -948,11 +948,12 @@ def main():
             print('\n[*] Generate Access token facebook [*]'.center(44) + '\n')
             print('[Warn] Please turn off your VPN before using this feature !!!')
             id()
-        elif cek.lower() == 'rm_token':
-	print('''
+       elif cek.lower() == 'rm_token':
+    print('''
 [Warn] You must create an access token again if 
        your access token is deleted
 ''')
+
 
 
             a = input("[!] Type 'delete' to continue : ")
