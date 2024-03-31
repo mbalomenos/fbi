@@ -952,10 +952,7 @@ def main():
 		print('''
 [Warn] You must create an access token again if 
        your access token is deleted
-''')
-
-
-
+       ''')
             a = input("[!] Type 'delete' to continue : ")
             if a.lower() == 'delete':
                 try:
