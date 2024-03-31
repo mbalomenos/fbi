@@ -938,67 +938,68 @@ def main():
 			main()
 
 	elif cek.lower() == 'token':
-		try:
-			open('cookie/token.log')
-			print '[!] an access token already exists'
-			cek = raw_input('[?] Are you sure you want to continue [Y/N] ')
-			if cek.lower() != 'y':
-				print '[*] Canceling '
-				bot()
-		except IOError:
-			pass
+    try:
+        open('cookie/token.log')
+        print('[!] An access token already exists')
+        cek = input('[?] Are you sure you want to continue [Y/N] ')
+        if cek.lower() != 'y':
+            print('[*] Canceling')
+            bot()
+    except IOError:
+        pass
 
-		print '\n' + '[*] Generate Access token facebook [*]'.center(44) + '\n'
-		print '[Warn] please turn off your VPN before using this feature !!!'
-		id()
-	elif cek.lower() == 'rm_token':
-		print '''
-[Warn] you must create access token again if 
+    print('\n[*] Generate Access token facebook [*]'.center(44) + '\n')
+    print('[Warn] Please turn off your VPN before using this feature !!!')
+    id()
+elif cek.lower() == 'rm_token':
+    print('''
+[Warn] You must create an access token again if 
        your access token is deleted
-'''       
-		a = raw_input("[!] type 'delete' to continue : ")
-		if a.lower() == 'delete':
-			try:
-				os.system('rm -rf cookie/token.log')
-				print '[*] Success delete cookie/token.log'
-				main()
-			except OSError:
-				print '[*] failed to delete cookie/token.log'
-				main()
-		else:
-			print '[*] failed to delete cookie/token.log'
-			main()
-	elif cek.lower() == 'about':
-		show_program()
-		main()
-	elif cek.lower() == 'exit':
-		print "[!] Exiting Program"
-		sys.exit()
-	elif cek.lower() == 'help':
-		info_ga()
-		main()
-	elif cek.lower() == 'dump_id':
-		dump_id()
-	elif cek.lower() == 'dump_phone':
-		dump_phone()
-	elif cek.lower() == 'dump_mail':
-		dump_mail()
+''')
+    a = input("[!] Type 'delete' to continue : ")
+    if a.lower() == 'delete':
+        try:
+            os.system('rm -rf cookie/token.log')
+            print('[*] Success delete cookie/token.log')
+            main()
+        except OSError:
+            print('[*] Failed to delete cookie/token.log')
+            main()
+    else:
+        print('[*] Failed to delete cookie/token.log')
+        main()
+elif cek.lower() == 'about':
+    show_program()
+    main()
+elif cek.lower() == 'exit':
+    print("[!] Exiting Program")
+    sys.exit()
+elif cek.lower() == 'help':
+    info_ga()
+    main()
+elif cek.lower() == 'dump_id':
+    dump_id()
+elif cek.lower() == 'dump_phone':
+    dump_phone()
+elif cek.lower() == 'dump_mail':
+    dump_mail()
 
-	if 'dump_' in cek.lower() and cek.lower().split('_')[2] == 'id':
-		target_id = cek.lower().split('_')[1]
-		dump_id_id()
-	else:
-		if cek == '':
-			main()
-		else:
-			print "[!] command '"+cek+"' not found"
-			print '[!] type "help" to show command'
-			main()
-  except KeyboardInterrupt:
-	main()
-  except IndexError:
-	print '[!] invalid parameter on command : ' + cek
-	main()
+if 'dump_' in cek.lower() and cek.lower().split('_')[2] == 'id':
+    target_id = cek.lower().split('_')[1]
+    dump_id_id()
+else:
+    if cek == '':
+        main()
+    else:
+        print("[!] Command '"+cek+"' not found")
+        print('[!] Type "help" to show command')
+        main()
+
+except KeyboardInterrupt:
+    main()
+except IndexError:
+    print('[!] Invalid parameter on command : ' + cek)
+    main()
 #
 ######################################################################################################################
 
