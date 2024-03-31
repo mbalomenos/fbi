@@ -898,108 +898,106 @@ def dump_id_id():
 
 ###############################################################################
 #                         Main
-
 def main():
-  global target_id
+    global target_id
 
-  try:
-	cek = raw_input(R + 'Hak9' + W +' >> ')
-
-	if cek.lower() == 'get_data':
-		if len(jml) == 0:
-			getdata()
-		else:
-			print '[*] You have retrieved %s friends data'%(len(jml))
-			main()
-	elif cek.lower() == 'get_info':
-		print '\n'+'[*] Information Gathering [*]'.center(44) + '\n'
-		search()
-	elif cek.lower() == 'bot':
-		menu_bot()
-		bot()
-	elif cek.lower() == "cat_token":
-		try:
-			o = open('cookie/token.log','r').read()
-			print '[*] Your access token !!\n\n' + o + '\n'
-			main()
-		except IOError:
-			print '[!] failed to open cookie/token.log'
-			print "[!] type 'token' to generate access token"
-			main()
-
-	elif cek.lower() == 'clear':
-		if sys.platform == 'win32':
-			os.system('cls')
-			baliho()
-			main()
-		else:
-			os.system('clear')
-			baliho()
-			main()
-
-	elif cek.lower() == 'token':
     try:
-        open('cookie/token.log')
-        print('[!] An access token already exists')
-        cek = input('[?] Are you sure you want to continue [Y/N] ')
-        if cek.lower() != 'y':
-            print('[*] Canceling')
-            bot()
-    except IOError:
-        pass
+        cek = input(R + 'Hak9' + W + ' >> ')
 
-    print('\n[*] Generate Access token facebook [*]'.center(44) + '\n')
-    print('[Warn] Please turn off your VPN before using this feature !!!')
-    id()
-elif cek.lower() == 'rm_token':
-    print('''
+        if cek.lower() == 'get_data':
+            if len(jml) == 0:
+                getdata()
+            else:
+                print('[*] You have retrieved %s friends data' % (len(jml)))
+                main()
+        elif cek.lower() == 'get_info':
+            print('\n' + '[*] Information Gathering [*]'.center(44) + '\n')
+            search()
+        elif cek.lower() == 'bot':
+            menu_bot()
+            bot()
+        elif cek.lower() == "cat_token":
+            try:
+                o = open('cookie/token.log', 'r').read()
+                print('[*] Your access token !!\n\n' + o + '\n')
+                main()
+            except IOError:
+                print('[!] failed to open cookie/token.log')
+                print("[!] type 'token' to generate access token")
+                main()
+        elif cek.lower() == 'clear':
+            if sys.platform == 'win32':
+                os.system('cls')
+                baliho()
+                main()
+            else:
+                os.system('clear')
+                baliho()
+                main()
+        elif cek.lower() == 'token':
+            try:
+                open('cookie/token.log')
+                print('[!] An access token already exists')
+                cek = input('[?] Are you sure you want to continue [Y/N] ')
+                if cek.lower() != 'y':
+                    print('[*] Canceling')
+                    bot()
+            except IOError:
+                pass
+
+            print('\n[*] Generate Access token facebook [*]'.center(44) + '\n')
+            print('[Warn] Please turn off your VPN before using this feature !!!')
+            id()
+        elif cek.lower() == 'rm_token':
+            print('''
 [Warn] You must create an access token again if 
        your access token is deleted
 ''')
-    a = input("[!] Type 'delete' to continue : ")
-    if a.lower() == 'delete':
-        try:
-            os.system('rm -rf cookie/token.log')
-            print('[*] Success delete cookie/token.log')
+            a = input("[!] Type 'delete' to continue : ")
+            if a.lower() == 'delete':
+                try:
+                    os.system('rm -rf cookie/token.log')
+                    print('[*] Success delete cookie/token.log')
+                    main()
+                except OSError:
+                    print('[*] Failed to delete cookie/token.log')
+                    main()
+            else:
+                print('[*] Failed to delete cookie/token.log')
+                main()
+        elif cek.lower() == 'about':
+            show_program()
             main()
-        except OSError:
-            print('[*] Failed to delete cookie/token.log')
+        elif cek.lower() == 'exit':
+            print("[!] Exiting Program")
+            sys.exit()
+        elif cek.lower() == 'help':
+            info_ga()
             main()
-    else:
-        print('[*] Failed to delete cookie/token.log')
-        main()
-elif cek.lower() == 'about':
-    show_program()
-    main()
-elif cek.lower() == 'exit':
-    print("[!] Exiting Program")
-    sys.exit()
-elif cek.lower() == 'help':
-    info_ga()
-    main()
-elif cek.lower() == 'dump_id':
-    dump_id()
-elif cek.lower() == 'dump_phone':
-    dump_phone()
-elif cek.lower() == 'dump_mail':
-    dump_mail()
+        elif cek.lower() == 'dump_id':
+            dump_id()
+        elif cek.lower() == 'dump_phone':
+            dump_phone()
+        elif cek.lower() == 'dump_mail':
+            dump_mail()
 
-if 'dump_' in cek.lower() and cek.lower().split('_')[2] == 'id':
-    target_id = cek.lower().split('_')[1]
-    dump_id_id()
-else:
-    if cek == '':
+        if 'dump_' in cek.lower() and cek.lower().split('_')[2] == 'id':
+            target_id = cek.lower().split('_')[1]
+            dump_id_id()
+        else:
+            if cek == '':
+                main()
+            else:
+                print("[!] Command '"+cek+"' not found")
+                print('[!] Type "help" to show command')
+                main()
+
+    except KeyboardInterrupt:
         main()
-    else:
-        print("[!] Command '"+cek+"' not found")
-        print('[!] Type "help" to show command')
+    except IndexError:
+        print('[!] Invalid parameter on command : ' + cek)
         main()
 
-except KeyboardInterrupt:
-    main()
-except IndexError:
-    print('[!] Invalid parameter on command : ' + cek)
-    main()
 #
 ######################################################################################################################
 
