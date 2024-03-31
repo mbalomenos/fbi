@@ -952,16 +952,17 @@ def main():
             print('''
 [Warn] You must create an access token again if 
        your access token is deleted
-		''')
-            a = input("[!] Type 'delete' to continue : ")
-            if a.lower() == 'delete':
-                try:
-                    os.system('rm -rf cookie/token.log')
-                    print('[*] Success delete cookie/token.log')
-                    main()
-                except OSError:
-                    print('[*] Failed to delete cookie/token.log')
-                    main()
+''')
+	a = input("[!] Type 'delete' to continue : ")
+	if a.lower() == 'delete':
+   	 try:
+        os.system('rm -rf cookie/token.log')
+        print('[*] Success delete cookie/token.log')
+        main()
+    	except OSError:
+        print('[*] Failed to delete cookie/token.log')
+        main()
+
             else:
                 print('[*] Failed to delete cookie/token.log')
                 main()
