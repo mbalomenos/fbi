@@ -95,20 +95,20 @@ def info_ga():
    exit               Exit the program
 '''%(G,W)
 def menu_bot():
-    	print('''
+    print('''
    %sNumber                  INFO%s
  ---------   ------------------------------------
 
-   [ 01 ]      auto reactions
-   [ 02 ]      auto comment
-   [ 03 ]      auto poke
-   [ 04 ]      accept all friend requests
-   [ 05 ]      delete all posts in your timeline
-   [ 06 ]      delete all friends
-   [ 07 ]      stop following all friends
-   [ 08 ]      delete all photo albums
+   [ 1 ]      auto reactions
+   [ 2 ]      auto comment
+   [ 3 ]      auto poke
+   [ 4 ]      accept all friend requests
+   [ 5 ]      delete all posts in your timeline
+   [ 6 ]      delete all friends
+   [ 7 ]      stop following all friends
+   [ 8 ]      delete all photo albums
 
-   [ 00 ]      back to main menu
+   [ 0 ]      back to main menu
 ''' % (G, W))
 
 def menu_reaction():
