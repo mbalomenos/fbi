@@ -58,8 +58,7 @@ def baliho():
 ####################################################################
 #		    Print In terminal
 def show_program():
-    print('%sINFORMATION%s' % (W, W))
- ------------------------------------------------------
+    	print('''%sINFORMATION%s''' % (W, W))
 
     Author     Hak9
     Name       Facebook Information
