@@ -112,19 +112,19 @@ def menu_bot():
 ''' % (G, W))
 
 def menu_reaction():
-    	print('''
+    print('''
    %sNumber                  INFO%s
 ''' % (G, W) +
 '''   ----------   ------------------------------------
 
-   [ 01 ]      like
-   [ 02 ]      reaction 'LOVE'
-   [ 03 ]      reaction 'WOW'
-   [ 04 ]      reaction 'HAHA'
-   [ 05 ]      reaction 'SAD'
-   [ 06 ]      reaction 'ANGRY'
+   [ 1 ]      like
+   [ 2 ]      reaction 'LOVE'
+   [ 3 ]      reaction 'WOW'
+   [ 4 ]      reaction 'HAHA'
+   [ 5 ]      reaction 'SAD'
+   [ 6 ]      reaction 'ANGRY'
 
-   [ 00 ]      back to menu bot
+   [ 0 ]      back to menu bot
 '''%(G,W))
 ####################################################################
 #                     GENERATE ACCESS TOKEN
