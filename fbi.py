@@ -97,8 +97,7 @@ def info_ga():
 def menu_bot():
     	print('''
    %sNumber                  INFO%s
-'''%(G,W) +
-   ''' ---------   ------------------------------------
+ ---------   ------------------------------------
 
    [ 01 ]      auto reactions
    [ 02 ]      auto comment
@@ -110,7 +109,7 @@ def menu_bot():
    [ 08 ]      delete all photo albums
 
    [ 00 ]      back to main menu
-'''%(G,W)
+''' % (G, W))
 
 def menu_reaction():
     	print('''
